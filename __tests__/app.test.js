@@ -8,7 +8,7 @@ describe('promise routes', () => {
     const res = await request(app)
       .get('/index.html');
 
-    expect(res.text).toEqual('<h1>I love Pizza</h1>');
+    expect(res.text).toEqual('<h1>I love pizza</h1>');
     expect(res.status).toEqual(200);                 
   });
 
