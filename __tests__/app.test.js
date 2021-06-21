@@ -9,9 +9,10 @@ describe('promise routes', () => {
       .get('/index.html');
 
     expect(res.text).toEqual('<h1>I love Pizza</h1>');
+    expect(res.status).toEqual(200);                 
   });
 
-  test('/index, return 404 Not Found error', async() => {
+  test.skip('/index, return 404 Not Found error', async() => {
 
     const res = await request(app)
       .get('/index.');
