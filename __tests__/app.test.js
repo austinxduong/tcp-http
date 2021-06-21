@@ -12,11 +12,11 @@ describe('promise routes', () => {
     expect(res.status).toEqual(200);                 
   });
 
-  test.skip('/index, return 404 Not Found error', async() => {
+  test('test for invalid path return 404 Not Found error', async() => {
 
     const res = await request(app)
       .get('/index.');
 
-    expect(res.text).toEqual('Not Found');
+    expect(res.text).toEqual('not found');
   });
 });
